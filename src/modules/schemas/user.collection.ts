@@ -6,10 +6,10 @@ const UserSchema: Schema<IUser> = new Schema(
     username: { type: String, required: true, unique: true },
     level: { type: Number, required: true, default: 0 },
     balance: { type: Number, required: true, default: 0 },
-    walletAddress: { type: String, required: true, unique: true },
+    walletAddress: { type: String, unique: true },
     referal: {
-      code: { type: String, required: true, unique: true },
-      count: { type: Number, required: true, default: 0 },
+      code: { type: String, unique: true },
+      count: { type: Number, default: 0 },
     },
     isBlocked: { type: Boolean, required: true, default: false },
   },
